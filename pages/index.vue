@@ -17,4 +17,25 @@
 </script>
 
 <style>
+[class='card'] {
+  margin: 5%;
+  color: #FFFFFF;
+  border-radius: 30px;
+  border-color: #FFFFFF;
+  border-style: solid;
+  border-width: 25%;
+}
+
+[class='card_name'] {
+  text-align: center;
+  border-bottom: #FFFFFF99;
+  border-bottom-width: 25%;
+  border-bottom-style: dashed;
+}
+
+[class='card_content'] {
+  margin-left: 5%;
+  text-align: left 5%;
+
+}
 </style>
