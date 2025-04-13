@@ -6,14 +6,19 @@
         <div class="card_content">
             <p>I am a cool person who develops shit from time to time.</p>
             <p>Currently, I am proficient in:</p>
-            <ul>
-                <li>Python</li>
-                <li>Yeah.... thats it.</li>
-            </ul>
+            <div v-for="lang in LANGUAGES" class="Languages">
+              <div class="Lang">
+                <h1>{{ lang.name }}</h1>
+                <p>{{ lang.description }}</p>
+              </div>
+            </div>
         </div>
     </div></template>
 
 <script lang="ts" setup>
+
+const LANGUAGES = [{name: 'Python 3', description:"Bery gug yes"}]
+
 </script>
 
 <style>
@@ -36,6 +41,10 @@
 [class='card_content'] {
   margin-left: 5%;
   text-align: left 5%;
+}
 
+[class='Languages']{
+  position: inherit;
+  align-self: center;
 }
 </style>
