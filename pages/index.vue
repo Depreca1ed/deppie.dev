@@ -1,50 +1,33 @@
 <template>
-    <div class="card">
-        <div class="card_name">
-            <h1>Hello! I'm Dep</h1>
+  <div class="flex flex-col mx-auto mt-10 max-w-max max-h-max gap-x-6 border-4 border-amber-50 rounded-3xl">
+    <div class="flex flex-row items-center ">
+      <img class="m-10 size-48 rounded-4xl" :src=SOCIALS.primary.avatar>
+      <div class="flex flex-col gap-y-5">
+        <div class="w-96 text-center text-9xl font-bold">
+          <p>{{ SOCIALS.primary.name }}</p>
         </div>
-        <div class="card_content">
-            <p>I am a cool person who develops shit from time to time.</p>
-            <p>Currently, I am proficient in:</p>
-            <div v-for="lang in LANGUAGES" class="Languages">
-              <div class="Lang">
-                <h1>{{ lang.name }}</h1>
-                <p>{{ lang.description }}</p>
-              </div>
-            </div>
+        <div class="text-center text-2xl font-semibold text-gray-500">
+          <p>(Deprecated)</p>
         </div>
-    </div></template>
+      </div>
+    </div>
+    <div class="flex border-t-1">
+      <div class="text-center mx-5 text-2xl text-wrap font-semibold">
+        <p>I love thighs</p>
+      </div>
+    </div>
+  </div>
+</template>
 
 <script lang="ts" setup>
+const PRIMARY_USERNAME = "Depreca1ed"
 
-const LANGUAGES = [{name: 'Python 3', description:"Bery gug yes"}]
+const { data: gh_data } = await useFetch('https://api.github.com/users/' + PRIMARY_USERNAME);
+
+const gh_data_value = gh_data.value as any
+
+const SOCIALS = { 'primary': { 'name': gh_data_value.name, 'avatar': gh_data_value.avatar_url } }
 
 </script>
 
-<style>
-[class='card'] {
-  margin: 5%;
-  color: #FFFFFF;
-  border-radius: 30px;
-  border-color: #FFFFFF;
-  border-style: solid;
-  border-width: 25%;
-}
-
-[class='card_name'] {
-  text-align: center;
-  border-bottom: #FFFFFF99;
-  border-bottom-width: 25%;
-  border-bottom-style: dashed;
-}
-
-[class='card_content'] {
-  margin-left: 5%;
-  text-align: left 5%;
-}
-
-[class='Languages']{
-  position: inherit;
-  align-self: center;
-}
-</style>
+<style></style>
