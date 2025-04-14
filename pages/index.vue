@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col mx-auto mt-10 max-w-max max-h-max gap-x-6 border-4 border-amber-50 rounded-3xl">
-    <div class="flex flex-row items-center ">
+    <div class="flex flex-row flex-wrap items-center ">
       <img class="m-10 size-48 rounded-4xl" :src=SOCIALS.primary.avatar>
       <div class="flex flex-col gap-y-5">
         <div class="w-96 text-center text-9xl font-bold">
