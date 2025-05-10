@@ -3,7 +3,7 @@
     <div class="flex flex-col mx-auto mt-10 gap-y-10">
       <img class="place-self-center size-48"
         src="https://yt3.googleusercontent.com/79BJqnTubpfXZBrfuaztTOHZruh6Mih3S03HgiypklUwHgCUOyrlJsU5Xopd4ABQty-61WDQtxA=s1200">
-      <p class="font-bold self-center text-5xl hover:underline">
+      <p class="text-pretty md:text-balance font-bold self-center text-5xl hover:underline">
         <a href="https://music.youtube.com/playlist?list=PLAhyFk0kU8Q0Fgb51u-nglgP43siXnTur">
           {{ playlist.title }}
         </a>
@@ -25,11 +25,11 @@
             <div class="flex flex-row gap-x-5 w-300 m-1">
               <img class="size-24 rounded-2xl self-start" :src=song.cover>
               <div class="flex flex-col gap-y-2.5 self-center text-left">
-                <p class="font-bold">{{ song.title }}</p>
+                <p class="text-pretty md:text-balance font-bold">{{ song.title }}</p>
                 <p class="font-semibold text-gray-400">{{ song.creator }}</p>
               </div>
             </div>
-            <p class="ml-10 text-left" v-if="song.show">{{ song.review }}</p>
+            <p class="text-pretty md:text-balance ml-10 text-left" v-if="song.show">{{ song.review }}</p>
           </div>
         </button>
       </div>
