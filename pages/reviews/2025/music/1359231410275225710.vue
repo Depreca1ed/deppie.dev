@@ -64,9 +64,7 @@
       "url": "https://music.youtube.com/watch?v=BGtGRP73iR4&si=2DuykFFoDloURmht",
       "cover": "https://lh3.googleusercontent.com/HO9-1DmMU29j6JtY-4f8DxKkD1WB7EMTVxGQm6ZvtAClmsbp1AvXeu76WfTNZRt9XJXI-6CMjZSoEo4=w544-h544-l90-rj",
       "show": false,
-      "review": "This song felt really calm while also maintaining the rock feel overall, which personally I'm a fan of. It doesn't bring a lot of energy by itself but I would listen a lot just for the calm vibe it gives off.
-
-4/5",
+      "review": "This song felt really calm while also maintaining the rock feel overall, which personally I'm a fan of. It doesn't bring a lot of energy by itself but I would listen a lot just for the calm vibe it gives off.\n\n4/5",
     },
     2: {
       "title": 'あのバンド - That band',
