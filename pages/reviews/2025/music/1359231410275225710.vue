@@ -25,11 +25,11 @@
             <div class="flex flex-row gap-x-5 w-300 m-1">
               <img class="size-24 rounded-2xl self-start" :src=song.cover>
               <div class="flex flex-col gap-y-2.5 self-center text-left">
-                <p class="text-pretty md:text-balance font-bold">{{ song.title }}</p>
+                <p class="mx-auto text-pretty md:text-balance font-bold">{{ song.title }}</p>
                 <p class="font-semibold text-gray-400">{{ song.creator }}</p>
               </div>
             </div>
-            <p class="text-pretty md:text-balance ml-10 text-left" v-if="song.show">{{ song.review }}</p>
+            <p class="mx-auto text-pretty md:text-balance ml-10 text-left" v-if="song.show">{{ song.review }}</p>
           </div>
         </button>
       </div>
