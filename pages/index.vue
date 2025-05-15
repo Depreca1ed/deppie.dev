@@ -13,7 +13,7 @@
     </div>
     <div class="flex border-t-1">
       <div class="text-center mx-5 text-2xl text-wrap font-semibold">
-        <p>I love thighs</p>
+        <p>I love thighs..... A LOT</p>
       </div>
     </div>
   </div>
