@@ -19,7 +19,7 @@
           </a>
         </div>
       </div>
-      <div v-for="song, index in songs" class="w-300 md:w-screen mt-10 justify-center mx-auto md:mx-screen">
+      <div v-for="song, index in songs" class="md:w-300 w-screen mt-10 justify-center md:mx-auto mx-screen">
         <button class="rounded-2xl border-4 border-black hover:border-white" @click=onclick(index)>
           <div class="flex flex-col gap-y-5">
             <div class="flex flex-row gap-x-5 m-1">
@@ -30,7 +30,7 @@
               </div>
             </div>
             <p class="text-pretty md:text-balance ml-10 text-left" v-if="song.show">{{ song.review }}</p>
-            <p class="mx-auto font-bold text-5xl text-center" v-if="song.show">{{ song.score }}</p>
+            <p class="font-bold text-5xl text-center" v-if="song.show">{{ song.score }}</p>
           </div>
         </button>
       </div>
