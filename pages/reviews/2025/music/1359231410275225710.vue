@@ -3,7 +3,7 @@
     <div class="flex flex-col mt-10 gap-y-10">
       <img class="place-self-center size-48"
         src="https://yt3.googleusercontent.com/79BJqnTubpfXZBrfuaztTOHZruh6Mih3S03HgiypklUwHgCUOyrlJsU5Xopd4ABQty-61WDQtxA=s1200">
-      <p class="text-pretty md:text-balance font-bold self-center text-5xl hover:underline">
+      <p class="text-pretty md:text-balance font-bold self-center text-2xl hover:underline">
         <a href="https://music.youtube.com/playlist?list=PLAhyFk0kU8Q0Fgb51u-nglgP43siXnTur">
           {{ playlist.title }}
         </a>
