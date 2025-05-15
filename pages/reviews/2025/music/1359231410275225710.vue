@@ -30,7 +30,7 @@
               </div>
             </div>
             <p class="text-pretty md:text-balance ml-10 text-left" v-if="song.show">{{ song.review }}</p>
-            <p class="font-bold text-5xl text-center" v-if="song.show">{{ song.score }}</p>
+            <p class="font-bold text-5xl text-center w-auto" v-if="song.show">{{ song.score }}</p>
           </div>
         </button>
       </div>
