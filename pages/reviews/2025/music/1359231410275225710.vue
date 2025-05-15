@@ -1,6 +1,6 @@
 <template>
   <div class"w-screen justify-center">
-    <div class="flex flex-col mx-auto mt-10 gap-y-10">
+    <div class="flex flex-col mt-10 gap-y-10">
       <img class="place-self-center size-48"
         src="https://yt3.googleusercontent.com/79BJqnTubpfXZBrfuaztTOHZruh6Mih3S03HgiypklUwHgCUOyrlJsU5Xopd4ABQty-61WDQtxA=s1200">
       <p class="text-pretty md:text-balance font-bold self-center text-5xl hover:underline">
@@ -25,11 +25,11 @@
             <div class="flex flex-row gap-x-5 w-300 m-1">
               <img class="size-24 rounded-2xl self-start" :src=song.cover>
               <div class="flex flex-col gap-y-2.5 self-center text-left">
-                <p class="mx-auto text-pretty md:text-balance font-bold">{{ song.title }}</p>
+                <p class="text-pretty md:text-balance font-bold">{{ song.title }}</p>
                 <p class="font-semibold text-gray-400">{{ song.creator }}</p>
               </div>
             </div>
-            <p class="mx-auto text-pretty md:text-balance ml-10 text-left" v-if="song.show">{{ song.review }}</p>
+            <p class="text-pretty md:text-balance ml-10 text-left" v-if="song.show">{{ song.review }}</p>
             <p class="mx-auto font-bold text-5xl text-center" v-if="song.show">{{ song.score }}</p>
           </div>
         </button>
