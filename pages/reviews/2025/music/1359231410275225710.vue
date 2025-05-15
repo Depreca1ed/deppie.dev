@@ -19,12 +19,12 @@
           </a>
         </div>
       </div>
-      <div v-for="song, index in songs" class="w-300 md:w-screen mt-10 mx-auto md:mx-screen">
+      <div v-for="song, index in songs" class="w-300 md:w-screen mt-10 justify-center mx-auto md:mx-screen">
         <button class="rounded-2xl border-4 border-black hover:border-white" @click=onclick(index)>
           <div class="flex flex-col gap-y-5">
             <div class="flex flex-row gap-x-5 m-1">
               <img class="size-24 rounded-2xl self-start" :src=song.cover>
-              <div class="flex flex-col gap-y-2.5 self-center text-left">
+              <div class="flex flex-col gap-y-2.5 text-left">
                 <p class="text-pretty md:text-balance font-bold">{{ song.title }}</p>
                 <p class="font-semibold text-gray-400">{{ song.creator }}</p>
               </div>
