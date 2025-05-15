@@ -1,5 +1,5 @@
 <template>
-  <div class"w-screen justify-center">
+  <div class="w-screen justify-center">
     <div class="flex flex-col mt-10 gap-y-10">
       <img class="place-self-center size-48"
         src="https://yt3.googleusercontent.com/79BJqnTubpfXZBrfuaztTOHZruh6Mih3S03HgiypklUwHgCUOyrlJsU5Xopd4ABQty-61WDQtxA=s1200">
