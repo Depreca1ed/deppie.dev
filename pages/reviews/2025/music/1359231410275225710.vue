@@ -20,8 +20,9 @@
         </div>
       </div>
       <div v-for="song, index in songs" class="mt-10 mx-auto">
-        <button class="rounded-2xl border-4 border-black hover:border-white" @click=onclick(index)>
-          <div class="flex flex-col gap-y-5 w-300">
+        <button class="rounded-2xl border-4 border-black hover:border-white transition:all .6s ease"
+          @click=onclick(index)>
+          <div class="flex flex-col w-300">
             <div class="flex flex-row gap-x-5 w-300 m-1">
               <img class="size-24 rounded-2xl self-start" :src=song.cover>
               <div class="flex flex-col gap-y-2.5 self-center text-left">
@@ -29,7 +30,9 @@
                 <p class="font-semibold text-gray-400">{{ song.creator }}</p>
               </div>
             </div>
-            <p class="ml-10 text-left" v-if="song.show">{{ song.review }}</p>
+            <div class="flex" v-if="song.show">
+              <p class="ml-10 text-left">{{ song.review }}</p>
+            </div>
           </div>
         </button>
       </div>
