@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col mx-auto">
     <div class="flex flex-col flex-wrap items-center mt-10 gap-5">
-      <img class="place-self-center self-center size-auto rounded-4xl" :src=SOCIALS.primary.avatar>
+      <img class="place-self-center self-center size-[25%] rounded-4xl" :src=SOCIALS.primary.avatar>
       <div class="flex flex-col gap-y-5">
         <div class="text-center text-2xl font-semibold text-gray-300">
           <p>Hi, I am </p>
@@ -26,9 +26,10 @@
 </script>
 
 <style>
+
   html {
-    background: url(/assets/bg.webp);
-    background-size: cover;
+    background: url("/assets/bg.webp");
+    background-size: fill;
     background-repeat: no-repeat;
     background-blend-mode: darken;
     background-color: #000000b0;

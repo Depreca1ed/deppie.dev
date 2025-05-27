@@ -1,39 +1,39 @@
 <template>
-  <div class="w-screen justify-center">
-    <div class="flex flex-col mt-10 gap-y-10">
-      <img class="place-self-center size-48"
-        src="https://yt3.googleusercontent.com/79BJqnTubpfXZBrfuaztTOHZruh6Mih3S03HgiypklUwHgCUOyrlJsU5Xopd4ABQty-61WDQtxA=s1200">
-      <p class="text-pretty md:text-balance font-bold self-center text-2xl hover:underline">
-        <a href="https://music.youtube.com/playlist?list=PLAhyFk0kU8Q0Fgb51u-nglgP43siXnTur">
-          {{ playlist.title }}
-        </a>
-      </p>
-      <div class="flex flex-row self-center gap-x-5">
-        <p class="text-2xl self-center">By</p>
-        <div class="border-2 rounded-4xl border-black hover:border-white">
-          <a :href=playlist.author.id>
-            <div class="flex flex-row gap-x-4 m-1">
-              <img class="size-14 rounded-4xl" :src=playlist.author.avatar>
-              <p class="font-semibold text-center mx-auto my-auto text-3xl"> {{ playlist.author.name }}</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div v-for="song, index in songs" class="md:w-300 w-screen mt-10 justify-center md:mx-auto mx-screen">
-        <button class="rounded-2xl border-4 border-black hover:border-white" @click=onclick(index)>
-          <div class="flex flex-col gap-y-5">
-            <div class="flex flex-row gap-x-5">
-              <img class="size-24 rounded-2xl self-start" :src=song.cover>
-              <div class="flex flex-col gap-y-2.5 text-left">
-                <p class="text-pretty md:text-balance font-bold">{{ song.title }}</p>
-                <p class="font-semibold text-gray-400">{{ song.creator }}</p>
-              </div>
-            </div>
-            <p class="text-pretty md:text-balance ml-10 text-left" v-if="song.show">{{ song.review }}</p>
-            <p class="font-bold text-5xl text-center mx-auto" v-if="song.show">{{ song.score }}</p>
+  <div class="flex flex-col mt-10 gap-y-10">
+    <img class="place-self-center size-48"
+      src="https://yt3.googleusercontent.com/79BJqnTubpfXZBrfuaztTOHZruh6Mih3S03HgiypklUwHgCUOyrlJsU5Xopd4ABQty-61WDQtxA=s1200">
+    <p class="text-pretty md:text-balance font-bold self-center text-2xl hover:underline">
+      <a href="https://music.youtube.com/playlist?list=PLAhyFk0kU8Q0Fgb51u-nglgP43siXnTur">
+        {{ playlist.title }}
+      </a>
+    </p>
+    <div class="flex flex-row self-center gap-x-5">
+      <p class="text-2xl self-center">By</p>
+      <div class="border-2 rounded-4xl border-black hover:border-white">
+        <a :href=playlist.author.id>
+          <div class="flex flex-row gap-x-4">
+            <img class="size-14 rounded-4xl" :src=playlist.author.avatar>
+            <p class="font-semibold text-center mx-screen my-auto text-3xl"> {{ playlist.author.name }}</p>
           </div>
-        </button>
+        </a>
       </div>
+    </div>
+    <div v-for="song, index in songs" class="w-screen md:w-[75%] h-auto mt-10 justify-center md:mx-auto mx-screen">
+      <button class="rounded-2xl border-2 w-[100%] border-black hover:border-white" @click=onclick(index) id=song.url>
+        <div class="flex flex-col gap-y-5">
+          <div class="flex flex-row gap-x-5">
+            <img class="size-24 rounded-2xl self-start" :src=song.cover>
+            <div class="flex flex-col gap-y-2.5 text-left">
+              <p class="text-pretty md:text-balance font-bold">{{ song.title }}</p>
+              <p class="font-semibold text-gray-400">{{ song.creator }}</p>
+            </div>
+          </div>
+          <div class="transition-[height] duration-300" v-if="song.show" id="{{ index }}">
+            <p class="text-pretty text-left ml-5 w-[100% - 10] self-center">{{ song.review }}</p>
+            <p class="font-bold text-5xl self-center">{{ song.score }}</p>
+          </div>
+        </div>
+      </button>
     </div>
   </div>
 </template>
@@ -55,6 +55,7 @@
     url: string,
     cover: string,
     show: boolean,
+    score: string,
     review: string
   }
 
@@ -125,9 +126,24 @@
 
   })
 
-  function onclick(song: number) {
-    console.log("Hi");
-    songs.value[song].show = !songs.value[song].show
+  function onclick(song_index: number) {
+
+    const song = songs.value[song_index];
+
+
+    const item = document.getElementById(song.url);
+
+    const review = document.getElementById(song_index);
+
+    item.addEventListener("click", () => {
+      if (songs.value[song_index].show) {
+        review.classList.remove("opened");
+      } else {
+        review.classList.add("opened");
+      }
+      songs.value[song_index].show = !songs.value[song_index].show
+    });
+
   }
 </script>
 <style>
@@ -135,5 +151,12 @@
     background-color: #000000;
     color: #FFFFFF;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  html {
+    background-color: #000000;
+    background: none;
+    color: #FFFFFF;
+
   }
 </style>
