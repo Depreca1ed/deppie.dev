@@ -19,16 +19,17 @@
       </div>
     </div>
     <div v-for="song, index in songs" class="w-screen md:w-[75%] h-auto mt-10 justify-center md:mx-auto mx-screen">
-      <button class="rounded-2xl border-2 w-[100%] border-black hover:border-white" @click=onclick(index) id=song.url>
+      <button class="rounded-2xl border-2 w-[100%] border-black hover:border-white" @click=onclick(index)>
         <div class="flex flex-col gap-y-5">
           <div class="flex flex-row gap-x-5">
             <img class="size-24 rounded-2xl self-start" :src=song.cover>
             <div class="flex flex-col gap-y-2.5 text-left">
-              <p class="text-pretty md:text-balance font-bold">{{ song.title }}</p>
+              <p class="text-pretty md:text-balance font-bold hover:underline"><a :href=song.url>{{ song.title }}</a>
+              </p>
               <p class="font-semibold text-gray-400">{{ song.creator }}</p>
             </div>
           </div>
-          <div class="transition-[height] duration-300" v-if="song.show" id="{{ index }}">
+          <div v-if=song.show>
             <p class="text-pretty text-left ml-5 w-[100% - 10] self-center">{{ song.review }}</p>
             <p class="font-bold text-5xl self-center">{{ song.score }}</p>
           </div>
@@ -123,27 +124,83 @@
       "score": "5/5",
       "review": "EVEN PEAKER",
     },
+    8: {
+      "title": "メリトクラシー - Meritocracy",
+      'creator': 'LAURELEY(Mizukami Sui)',
+      "url": "https://music.youtube.com/watch?v=2Eu4CSJ93kM&si=-145n_tgO06GGht0",
+      "cover": "https://lh3.googleusercontent.com/P54wzAyroU3u5lZRmpW7j47eTKWYSKjt1dh7uOKrZyQhkUsOzE5Fiu4IdKFYrhFCA0g6fY-bTf6uV3xl=w544-h544-l90-rj",
+      "show": false,
+      "score": "5/5",
+      "review": "EVEN PEAKER",
+    },
+    9: {
+      "title": "雑踏、僕らの街 - Wrong World",
+      'creator': 'TOGENASHI TOGEARI',
+      "url": "https://music.youtube.com/watch?v=hfRSZyUuwIk&si=q1dolydKzMffIxue",
+      "cover": "https://lh3.googleusercontent.com/iyu6L7GTYsdvmKQpBZjDbkJUG1aNsvBhOnIgv5KCI6tCM_gQVhuLemsp5ZcL2EUAjZcE-HMcNhm1FcdASg=w544-h544-l90-rj",
+      "show": false,
+      "score": "5/5",
+      "review": "EVEN PEAKER",
+    },
+    10: {
+      "title": "誰にもなれない私だから - I'm Nobody",
+      'creator': 'TOGENASHI TOGEARI',
+      "url": "https://music.youtube.com/watch?v=dJottC7FmYc&si=-ZVaB3POrr7jKcRJ",
+      "cover": "https://lh3.googleusercontent.com/ef5re79DZ8Mma6S0ckONj87HHi6_qFxX1JcOORqhV0lyc6rxPX40zH19snPy34aJ9emdZm35xYBqG5rTlw=w544-h544-l90-rj",
+      "show": false,
+      "score": "5/5",
+      "review": "EVEN PEAKER",
+    },
+    11: {
+      "title": "偽りの理 - no rhyme nor reason",
+      'creator': 'TOGENASHI TOGEARI',
+      "url": "https://music.youtube.com/watch?v=aIgSVT6U49A&si=PFMDkBsHQoKCL3R8",
+      "cover": "https://lh3.googleusercontent.com/pl2ewg-M18JZmcOB5qhzWubZUOtRt73ek1-ls6mY5fcARE6hhMGo6CVLeN6DfMscTPedkSGy3D0VKHf1=w544-h544-l90-rj",
+      "show": false,
+      "score": "5/5",
+      "review": "EVEN PEAKER",
+    },
+    12: {
+      "title": "壱雫空 - Hitoshizuku",
+      'creator': 'MyGO!!!!!',
+      "url": "https://music.youtube.com/watch?v=bqDL0mTUiLs&si=I3e7U6uAWmUVaCeR",
+      "cover": "https://lh3.googleusercontent.com/sC2Vr-kQrJbdPnb2PyoGRb6kXQDadDngDFufUQS-HT-Itg9SKMIoRyKRODMSUqt1GfpVElNBUHZc8KM=w544-h544-l90-rj",
+      "show": false,
+      "score": "5/5",
+      "review": "EVEN PEAKER",
+    },
+    13: {
+      "title": "春日影 (MyGO!!!!! ver.) - Haruhikage (MyGO!!!!! ver.)",
+      'creator': 'MyGO!!!!!',
+      "url": "https://music.youtube.com/watch?v=NycFr6D6DSw&si=d2Bycp3aj905UEF9",
+      "cover": "https://lh3.googleusercontent.com/NK_v245J52vq2Wx1g8GJGRqHQBaxZj65bzl0j25sx_08aIo8Rc_7U5A07de3NUq2l3TtapnK_AuLwVcl=w544-h544-l90-rj",
+      "show": false,
+      "score": "5/5",
+      "review": "EVEN PEAKER",
+    },
+    14: {
+      "title": "影色舞 - SilhouetteDance",
+      'creator': 'MyGO!!!!!',
+      "url": "https://music.youtube.com/watch?v=5_ZWx7Q26Tw&si=vyfBOlRHrtH4Ek7-",
+      "cover": "https://lh3.googleusercontent.com/zlhsEUJAk5LwKIm81UKkJfj3drraavEkcjV2StHaRWQFsYoxbvskqYRyFekwSvSaca0iQCmgdg-shuvMuw=w544-h544-l90-rj",
+      "show": false,
+      "score": "5/5",
+      "review": "EVEN PEAKER",
+    },
+    15: {
+      "title": "迷星叫 (instrumental) - Mayoiuta (instrumental)",
+      'creator': 'MyGO!!!!!',
+      "url": "https://music.youtube.com/watch?v=uyC45EQb4dM&si=Op7gyhiAn4aBf7SD",
+      "cover": "https://lh3.googleusercontent.com/iV4bgifkW_75FO-huG3c06U32_Q72KmKcTobLxNASY3zpYjY9bFtJs9gK-h8c91-KfgDVSec0b2KvN04=w544-h544-l90-rj",
+      "show": false,
+      "score": "5/5",
+      "review": "EVEN PEAKER",
+    },
 
   })
-
   function onclick(song_index: number) {
 
-    const song = songs.value[song_index];
-
-
-    const item = document.getElementById(song.url);
-
-    const review = document.getElementById(song_index);
-
-    item.addEventListener("click", () => {
-      if (songs.value[song_index].show) {
-        review.classList.remove("opened");
-      } else {
-        review.classList.add("opened");
-      }
-      songs.value[song_index].show = !songs.value[song_index].show
-    });
-
+    songs.value[song_index].show = !songs.value[song_index].show
   }
 </script>
 <style>
