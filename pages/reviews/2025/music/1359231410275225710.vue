@@ -62,12 +62,12 @@
     "author": {
       "name": "raeschh",
       "id": "https://discord.com/users/257904697032179712",
-      "avatar": "https://cdn.discordapp.com/avatars/257904697032179712/e34f0a38042a8c4c34359ce65b10f9f0.png"
+      "avatar": "https://cdn.discordapp.com/avatars/257904697032179712/1ec3e793dd437e08487855178031cc88.png"
     },
     "reviewer": {
       "name": "deprecating",
       'id': "https://discord.com/users/688293803613880334",
-      "avatar": "https://cdn.discordapp.com/avatars/688293803613880334/793949f5865d7e312827ada3458458ef.png"
+      "avatar": "https://cdn.discordapp.com/avatars/688293803613880334/72673cf1ff3bd31bf0428a957f84bb3f.png"
     }
   }
 
